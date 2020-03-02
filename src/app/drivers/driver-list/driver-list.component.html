@@ -1,0 +1,13 @@
+<H2>List all drivers</H2>
+<div><a [routerLink] = "['add']">Add New...</a></div>
+<div *ngIf="drivers">
+<ul>
+    <li *ngFor="let driver of drivers">
+        <span><a [routerLink]="['driver', driver.id]"> {{driver.name}}</a></span>
+        <!-- <span><a [routerLink]="['driver', driver.id]"> {{driver.name}}</a></span> -->
+    </li>
+</ul>
+</div>
+<button (click)="back($event)">Back</button> <button (click)="next($event)">Next</button>
+<router-outlet></router-outlet>
+

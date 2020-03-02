@@ -1,0 +1,20 @@
+<form [formGroup]="clientForm" (ngSubmit)="onSubmit()">
+  
+    <label>
+      Name:
+      <input type="text" formControlName="name">
+    </label>
+  
+    <label>
+      City:
+      <input type="text" formControlName="city">
+    </label>
+
+    <label>
+        Phone
+        <input type="text" formControlName="phone">
+      </label>
+
+    <button type="submit">Save Form</button>
+  
+</form>

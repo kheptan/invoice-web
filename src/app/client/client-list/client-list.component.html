@@ -1,0 +1,12 @@
+<H2>List all clients</H2>
+<div><a [routerLink] = "['add']">Add New...</a></div>
+<div *ngIf="clients">
+<ul>
+    <li *ngFor="let client of clients">
+        <span><a [routerLink]="['client', client.id]"> {{client.name}}</a></span>
+        <!-- <span><a [routerLink]="['driver', driver.id]"> {{driver.name}}</a></span> -->
+    </li>
+</ul>
+</div>
+<button (click)="back($event)">Back</button> <button (click)="next($event)">Next</button>
+<router-outlet></router-outlet>

@@ -1,0 +1,12 @@
+<div *ngIf="seller$ | async as seller">
+    <div><label>Name: </label> <span>{{seller.name}}</span></div>
+    <p></p>
+    <div><label>City: </label> <span>{{seller.address.city}}</span></div>
+    <div><label>Street: </label> <span>{{seller.address.streetName}}</span></div>
+    <div><label>Street Number: </label> <span>{{seller.address.streetNumber}}</span></div>
+    <div><label>Postal Code: </label> <span>{{seller.address.postalCode}}</span></div>
+    <p></p>
+    <div><label>Bank: </label> <span>{{seller.account.bank}}</span></div>
+    <div><label>IBAN: </label> <span>{{seller.account.accountNumber}}</span></div>
+    <div><label>Account Type: </label> <span>{{seller.account.accountType}}</span></div>
+</div>

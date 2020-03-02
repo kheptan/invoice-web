@@ -1,0 +1,16 @@
+<div *ngIf="invoice$ | async as invoice">
+    <div><label>Invoice Number: </label> <span>{{invoice.invoiceNumber}}</span></div>
+    <div><label>Date: </label> <span>{{invoice.date}}</span></div>
+    <div><label>Client: </label> <span>{{invoice.client.name}}</span></div>
+    <div><label>Driver: </label> <span>{{invoice.driver.name}}</span></div>
+    <ul>
+        <li *ngFor="let line of invoice.lineItem">
+            <span>Product : {{ line.product.name }} </span>
+            <span>Quantity: {{ line.quantity }}</span>
+            <span> Price: {{ line.product.price }} </span>
+            <span>Vat: {{line.product.vat}}</span>
+            <span> Value: {{line.value}}</span>
+            <!-- <span><a [routerLink]="['driver', driver.id]"> {{driver.name}}</a></span> -->
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,12 @@
+<H2>List all invoices</H2>
+<div><a [routerLink] = "['add']">Add New...</a></div>
+<div *ngIf="invoices">
+<ul>
+    <li *ngFor="let invoice of invoices">
+        <span><a [routerLink]="['invoice', invoice.id]"> {{invoice.invoiceNumber}}</a></span>
+        <!-- <span><a [routerLink]="['driver', driver.id]"> {{driver.name}}</a></span> -->
+    </li>
+</ul>
+</div>
+<button (click)="back($event)">Back</button> <button (click)="next($event)">Next</button>
+<router-outlet></router-outlet>

@@ -1,0 +1,55 @@
+<form [formGroup]="invoiceForm" (ngSubmit)="onSubmit()">
+    <div class="top-div">
+      <div class="label-div">
+          <label>
+               Invoice Number:
+                  <input type="text" formControlName="invoiceNumber">
+          </label>
+      </div>
+      
+      <div class="label-div">
+          <label>
+              Date:
+              <input type="text" formControlName="date">
+          </label>
+      </div>
+      <div class="label-div">
+          <label>
+              Payment Status: 
+              <input type="text" formControlName="status">
+          </label>
+      </div>
+      <div class="label-div">
+          <label>
+              Client:
+              <select formControlName="client" (change) = "selectedClient()">
+                  <option *ngFor = "let client of clients" [ngValue]="client">{{client.name}}</option>
+              </select>
+              
+          </label>
+      </div>
+      <div class="label-div">
+          <label>
+              Driver :
+              <select formControlName="driver" (change) = "selectedDriver()">
+                <option *ngFor = "let driver of drivers" [ngValue]="driver">{{driver.name}}</option>
+            </select>
+          </label>
+      </div>
+      <div class="label-div">
+          <label>
+              Seller:
+              <select formControlName="seller">
+                <option *ngFor = "let seller of sellers" [ngValue]="seller">{{seller.name}}</option>
+            </select>
+          </label>
+      </div>
+    
+      <button type="submit">Save Form</button>
+      </div>
+  </form>
+  
+  
+  <app-line-item (lineRequest) = "addLine($event)">
+
+  </app-line-item>

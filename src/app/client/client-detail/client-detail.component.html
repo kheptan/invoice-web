@@ -1,0 +1,7 @@
+<p>client-detail works!</p>
+<div *ngIf="client$ | async as client">
+    <div><label>Client name: </label> <span>{{client.name}}</span></div>
+    <div><label>Bank: </label> <span>{{client.account.bank}}</span></div>
+    <div><label>IBAN: </label> <span>{{client.account.accountNumber}}</span></div>
+    <div><label>Value : </label> <span>{{client.accountType}}</span></div>
+</div>

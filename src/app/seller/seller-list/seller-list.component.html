@@ -1,0 +1,12 @@
+<H2>List all drivers</H2>
+<div><a [routerLink] = "['add']">Add New...</a></div>
+<div *ngIf="sellers$">
+<ul>
+    <li *ngFor="let seller of sellers$ | async">
+        <span><a [routerLink]="['seller', seller.id]"> {{seller.name}}</a></span>
+        <!-- <span><a [routerLink]="['driver', driver.id]"> {{driver.name}}</a></span> -->
+    </li>
+</ul>
+</div>
+
+<router-outlet></router-outlet>

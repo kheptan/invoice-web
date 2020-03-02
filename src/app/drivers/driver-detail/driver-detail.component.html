@@ -1,0 +1,4 @@
+<div *ngIf="driver$ | async as driver">
+    <div><label>Driver name: </label> <span>{{driver.name}}</span></div>
+    <div><label>Car number: </label> <span>{{driver.carNumber}}</span></div>
+</div>

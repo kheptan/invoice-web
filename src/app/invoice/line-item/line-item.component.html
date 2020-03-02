@@ -1,0 +1,40 @@
+<form [formGroup]="lineForm" (ngSubmit)="onSubmit()">
+    <div class="top-div">
+      <div class="label-div">
+          <label>
+              Product:
+              <select (change) = "updateItems()" 
+                      formControlName="product">
+                  <option *ngFor = "let product of products" [ngValue]="product">{{product.name}}</option>
+              </select>
+              
+          </label>
+      </div>
+      <div class="label-div">
+        <label>
+            Quantity:
+            <input type="text" formControlName="quantity">
+        </label>
+      </div>
+      <div class="label-div">
+        <label>
+            Price:
+            <input type="text" formControlName="price">
+        </label>
+      </div>
+      <div class="label-div">
+        <label>
+            Vat
+            <input type="text" formControlName="vat">
+        </label>
+      </div>
+      <div class="label-div">
+        <label>
+            Payment Status: 
+            <input type="text" formControlName="value">
+        </label>
+      </div>
+
+      <button type="submit">Add line</button>
+      </div>
+  </form>

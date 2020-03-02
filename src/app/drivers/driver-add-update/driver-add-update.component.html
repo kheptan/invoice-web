@@ -1,0 +1,15 @@
+<form [formGroup]="driverForm" (ngSubmit)="onSubmit()">
+  
+    <label>
+      Driver Name:
+      <input type="text" formControlName="name">
+    </label>
+  
+    <label>
+      Driver Car Number:
+      <input type="text" formControlName="carNumber">
+    </label>
+
+    <button type="submit">Save Form</button>
+  
+</form>

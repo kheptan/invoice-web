@@ -1,0 +1,73 @@
+<form [formGroup]="sellerForm" (ngSubmit)="onSubmit()">
+  <div>
+    <div>
+        <label>
+             Name:
+                <input type="text" formControlName="name">
+        </label>
+    </div>
+    
+    <div>
+        <label>
+            City:
+            <input type="text" formControlName="city">
+        </label>
+    </div>
+    <div>
+        <label>
+            Street 
+            <input type="text" formControlName="streetName">
+        </label>
+    </div>
+    <div>
+        <label>
+            Street Number 
+            <input type="text" formControlName="streetNumber">
+        </label>
+    </div>
+    <div>
+        <label>
+            Postal Code 
+            <input type="text" formControlName="postalCode">
+        </label>
+    </div>
+    <div>
+        <label>
+            Bank
+            <input type="text" formControlName="bank">
+        </label>
+    </div>
+    <div>
+        <label>
+            IBAN 
+            <input type="text" formControlName="accountNumber">
+        </label>
+    </div>
+    <div>
+        <label>
+            Account Type
+            <input type="text" formControlName="accountType">
+        </label>
+    </div>
+    <div>
+        <label>
+            Fiscal Code
+            <input type="text" formControlName="fiscalCode">
+        </label>
+    </div>
+    <div>
+        <label>
+            Email
+            <input type="text" formControlName="email">
+        </label>
+    </div>
+    <div>
+        <label>
+            phone
+            <input type="text" formControlName="phone">
+        </label>
+    </div>
+    <button type="submit">Save Form</button>
+      </div>
+</form>
+
